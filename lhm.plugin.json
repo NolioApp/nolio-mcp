@@ -9,12 +9,1095 @@
   "cloudEndpoint": "https://mcp.nolio.io/mcp",
   "icon": "https://static.cdn.nolio.io/nolio/images/nolio_logo_circle.png",
   "category": "productivity",
-  "tags": ["sports", "training", "coaching", "endurance", "running", "cycling", "triathlon", "strength", "hyrox", "fitness"],
+  "tags": [
+    "sports",
+    "training",
+    "coaching",
+    "endurance",
+    "running",
+    "cycling",
+    "triathlon",
+    "strength",
+    "hyrox",
+    "fitness"
+  ],
   "localizations": [
     {
       "locale": "fr-FR",
       "name": "Nolio",
       "description": "Serveur officiel de l'app Nolio : planifie, analyse et coache l'entraînement endurance, renfo et Hyrox."
+    }
+  ],
+  "tools": [
+    {
+      "name": "apply_training_frame",
+      "description": "Schedule a library workout template on an athlete's, a group's or your own calendar.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "frame": {
+            "type": "string"
+          },
+          "date_start": {
+            "type": "string"
+          },
+          "athletes": {
+            "type": "array"
+          },
+          "group": {
+            "type": "string"
+          },
+          "time": {
+            "type": "string"
+          },
+          "moment": {
+            "type": "string"
+          },
+          "recurrence": {
+            "type": "object"
+          }
+        },
+        "required": [
+          "frame",
+          "date_start"
+        ]
+      }
+    },
+    {
+      "name": "create_library_category",
+      "description": "Create a folder in your template library or in a club's library.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "parent": {
+            "type": "string"
+          },
+          "team": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name"
+        ]
+      }
+    },
+    {
+      "name": "create_planned_event",
+      "description": "Plan a competition, a training cycle, a note or a questionnaire on a calendar.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string"
+          },
+          "date_start": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "athlete": {
+            "type": "string"
+          },
+          "group": {
+            "type": "string"
+          },
+          "date_end": {
+            "type": "string"
+          },
+          "sport": {
+            "type": "string"
+          },
+          "goal_type": {
+            "type": "string"
+          },
+          "event": {
+            "type": "string"
+          },
+          "time": {
+            "type": "string"
+          },
+          "moment": {
+            "type": "string"
+          },
+          "duration_minutes": {
+            "type": "integer"
+          },
+          "distance_km": {
+            "type": "number"
+          },
+          "elevation_gain_m": {
+            "type": "integer"
+          },
+          "elevation_loss_m": {
+            "type": "integer"
+          },
+          "rpe": {
+            "type": "integer"
+          },
+          "note_type": {
+            "type": "string"
+          },
+          "hour_start": {
+            "type": "string"
+          },
+          "hour_end": {
+            "type": "string"
+          },
+          "quiz_template": {
+            "type": "string"
+          },
+          "questions": {
+            "type": "array"
+          },
+          "description": {
+            "type": "string"
+          },
+          "color": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "type",
+          "date_start"
+        ]
+      }
+    },
+    {
+      "name": "create_planned_training",
+      "description": "Plan a workout, structured or not, for one or more athletes, a group or yourself.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "date_start": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "sport": {
+            "type": "string"
+          },
+          "athletes": {
+            "type": "array"
+          },
+          "group": {
+            "type": "string"
+          },
+          "time": {
+            "type": "string"
+          },
+          "moment": {
+            "type": "string"
+          },
+          "workout": {
+            "type": "array"
+          },
+          "description": {
+            "type": "string"
+          },
+          "duration": {
+            "type": "object"
+          },
+          "distance": {
+            "type": "object"
+          },
+          "elevation_gain": {
+            "type": "object"
+          },
+          "elevation_loss": {
+            "type": "object"
+          },
+          "rpe": {
+            "type": "number"
+          },
+          "show_rpe": {
+            "type": "boolean"
+          },
+          "coggan_load": {
+            "type": "integer"
+          },
+          "tonnage": {
+            "type": "object"
+          },
+          "tags": {
+            "type": "array"
+          },
+          "color": {
+            "type": "string"
+          },
+          "recurrence": {
+            "type": "object"
+          },
+          "dry_run": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "date_start",
+          "name",
+          "sport"
+        ]
+      }
+    },
+    {
+      "name": "create_training_frame",
+      "description": "Create a reusable workout template in your library or a team library.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "sport": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "team": {
+            "type": "string"
+          },
+          "workout": {
+            "type": "array"
+          },
+          "description": {
+            "type": "string"
+          },
+          "duration": {
+            "type": "object"
+          },
+          "distance": {
+            "type": "object"
+          },
+          "elevation_gain": {
+            "type": "object"
+          },
+          "elevation_loss": {
+            "type": "object"
+          },
+          "rpe": {
+            "type": "number"
+          },
+          "show_rpe": {
+            "type": "boolean"
+          },
+          "coggan_load": {
+            "type": "integer"
+          },
+          "tonnage": {
+            "type": "object"
+          },
+          "tags": {
+            "type": "array"
+          },
+          "color": {
+            "type": "string"
+          },
+          "dry_run": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "name",
+          "sport",
+          "category"
+        ]
+      }
+    },
+    {
+      "name": "delete_event",
+      "description": "Delete one calendar event or library template, after explicit confirmation.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "confirm": {
+            "type": "boolean"
+          },
+          "athlete": {
+            "type": "string"
+          },
+          "group": {
+            "type": "string"
+          },
+          "plan": {
+            "type": "string"
+          },
+          "event_type": {
+            "type": "string"
+          },
+          "recurrence_action": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "confirm"
+        ]
+      }
+    },
+    {
+      "name": "get_calendar",
+      "description": "Read the planned or completed calendar: workouts, races, cycles, notes and questionnaires.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "mode": {
+            "type": "string"
+          },
+          "athlete": {
+            "type": "string"
+          },
+          "group": {
+            "type": "string"
+          },
+          "date_from": {
+            "type": "string"
+          },
+          "date_to": {
+            "type": "string"
+          },
+          "types": {
+            "type": "array"
+          },
+          "limit": {
+            "type": "integer"
+          },
+          "starting_after": {
+            "type": "string"
+          },
+          "time_in_zones": {
+            "type": "boolean"
+          },
+          "full_descriptions": {
+            "type": "boolean"
+          },
+          "with_description_html": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    {
+      "name": "get_endpoint_schema",
+      "description": "Get the request and response schema of one Nolio API v2 endpoint.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "method": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "path"
+        ]
+      }
+    },
+    {
+      "name": "get_planned_training",
+      "description": "Read a planned workout in full, ready to be edited.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "athlete": {
+            "type": "string"
+          },
+          "group": {
+            "type": "string"
+          },
+          "recurrence_action": {
+            "type": "string"
+          },
+          "with_description_html": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "id"
+        ]
+      }
+    },
+    {
+      "name": "get_records",
+      "description": "Read personal records: best power, pace, heart rate or cadence over a duration or distance.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "category": {
+            "type": "string"
+          },
+          "axis": {
+            "type": "string"
+          },
+          "windows": {
+            "type": "array"
+          },
+          "sports": {
+            "type": "array"
+          },
+          "athlete": {
+            "type": "string"
+          },
+          "date_from": {
+            "type": "string"
+          },
+          "date_to": {
+            "type": "string"
+          },
+          "top": {
+            "type": "integer"
+          }
+        }
+      }
+    },
+    {
+      "name": "get_stats_chart",
+      "description": "Read one statistics breakdown over a period, such as time in zones or volume by sport.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "chart": {
+            "type": "string"
+          },
+          "athlete": {
+            "type": "string"
+          },
+          "date_from": {
+            "type": "string"
+          },
+          "date_to": {
+            "type": "string"
+          },
+          "sport": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "chart"
+        ]
+      }
+    },
+    {
+      "name": "get_training",
+      "description": "Read a completed workout or race: stats, debrief, laps and sensor curves.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "athlete": {
+            "type": "string"
+          },
+          "laps": {
+            "type": "boolean"
+          },
+          "streams": {
+            "type": "array"
+          },
+          "max_points": {
+            "type": "integer"
+          },
+          "from_index": {
+            "type": "integer"
+          },
+          "to_index": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "id"
+        ]
+      }
+    },
+    {
+      "name": "get_training_frame",
+      "description": "Read a library workout template in full, ready to be edited.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "with_description_html": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "id"
+        ]
+      }
+    },
+    {
+      "name": "get_training_load",
+      "description": "Read the training load curve: fitness, fatigue and form, realized or projected.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "mode": {
+            "type": "string"
+          },
+          "athlete": {
+            "type": "string"
+          },
+          "date_from": {
+            "type": "string"
+          },
+          "date_to": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    {
+      "name": "list_athlete_subscriptions",
+      "description": "List the coaching subscriptions you bill or pay.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "athlete": {
+            "type": "string"
+          },
+          "limit": {
+            "type": "integer"
+          }
+        }
+      }
+    },
+    {
+      "name": "list_athletes",
+      "description": "List the athletes, groups and teams you coach.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "q": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    {
+      "name": "list_exercises",
+      "description": "Search strength exercises in your library, your teams' and Nolio's.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "is_load": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "query"
+        ]
+      }
+    },
+    {
+      "name": "list_library_categories",
+      "description": "List the folders of your template library.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string"
+          },
+          "q": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "type"
+        ]
+      }
+    },
+    {
+      "name": "list_metric_values",
+      "description": "Read daily metric values such as HRV, resting heart rate, sleep or weight.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "metric": {
+            "type": "string"
+          },
+          "athlete": {
+            "type": "string"
+          },
+          "date_from": {
+            "type": "string"
+          },
+          "date_to": {
+            "type": "string"
+          },
+          "limit": {
+            "type": "integer"
+          },
+          "starting_after": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    {
+      "name": "list_metrics",
+      "description": "List the metrics available to you or to an athlete.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "athlete": {
+            "type": "string"
+          },
+          "q": {
+            "type": "string"
+          },
+          "is_wb_compatible": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    {
+      "name": "list_my_invoices",
+      "description": "List your own Nolio invoices.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "limit": {
+            "type": "integer"
+          }
+        }
+      }
+    },
+    {
+      "name": "list_planned_trainings",
+      "description": "Find planned workouts over a date window.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "athlete": {
+            "type": "string"
+          },
+          "group": {
+            "type": "string"
+          },
+          "date_from": {
+            "type": "string"
+          },
+          "date_to": {
+            "type": "string"
+          },
+          "limit": {
+            "type": "integer"
+          },
+          "recurrence": {
+            "type": "string"
+          },
+          "time_in_zones": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    {
+      "name": "list_quiz_templates",
+      "description": "List the questionnaire templates you can plan, including the Hooper questionnaire.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "hooper_only": {
+            "type": "boolean"
+          },
+          "limit": {
+            "type": "integer"
+          },
+          "starting_after": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    {
+      "name": "list_recent_deletions",
+      "description": "List your recent deletions that can still be undone.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "limit": {
+            "type": "integer"
+          }
+        }
+      }
+    },
+    {
+      "name": "list_sports",
+      "description": "List your sports or an athlete's.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "athlete": {
+            "type": "string"
+          },
+          "is_active": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    {
+      "name": "list_stats_charts",
+      "description": "List the statistics breakdowns available for an athlete.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "athlete": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    {
+      "name": "list_tags",
+      "description": "List your workout tags.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "athlete": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    {
+      "name": "list_training_frames",
+      "description": "Search your workout templates and your teams'.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "q": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "sport": {
+            "type": "string"
+          },
+          "family": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    {
+      "name": "list_zones",
+      "description": "List training zones (heart rate, pace, power) for you or an athlete.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "athlete": {
+            "type": "string"
+          },
+          "sport": {
+            "type": "string"
+          },
+          "template_mode": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    {
+      "name": "nolio_api_read",
+      "description": "Read any Nolio API v2 endpoint when no dedicated tool fits.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "params": {
+            "type": "object"
+          }
+        },
+        "required": [
+          "path"
+        ]
+      }
+    },
+    {
+      "name": "nolio_api_write",
+      "description": "Write to any Nolio API v2 endpoint when no dedicated tool fits, with a preview step for batches.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "method": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          },
+          "body": {
+            "type": "object"
+          }
+        },
+        "required": [
+          "method",
+          "path"
+        ]
+      }
+    },
+    {
+      "name": "read_conversations",
+      "description": "Read the messages between a coach and athletes, or the comments on a workout.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "event": {
+            "type": "string"
+          },
+          "thread": {
+            "type": "string"
+          },
+          "unread_only": {
+            "type": "boolean"
+          },
+          "limit": {
+            "type": "integer"
+          },
+          "starting_after": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    {
+      "name": "review_training",
+      "description": "Coach only: mark an athlete's workout as viewed and optionally comment on it.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "comment": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id"
+        ]
+      }
+    },
+    {
+      "name": "search_nolio_api_docs",
+      "description": "Find the right tool or API endpoint for a task.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "query"
+        ]
+      }
+    },
+    {
+      "name": "undo_deletion",
+      "description": "Restore something deleted earlier, after a preview and explicit confirmation.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "confirm": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "id"
+        ]
+      }
+    },
+    {
+      "name": "update_library_category",
+      "description": "Rename, move or collapse a library folder.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "parent": {
+            "type": "string"
+          },
+          "is_visible": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "id"
+        ]
+      }
+    },
+    {
+      "name": "update_planned_event",
+      "description": "Change a planned competition, cycle, note or questionnaire.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "athlete": {
+            "type": "string"
+          },
+          "group": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "date_start": {
+            "type": "string"
+          },
+          "date_end": {
+            "type": "string"
+          },
+          "sport": {
+            "type": "string"
+          },
+          "goal_type": {
+            "type": "string"
+          },
+          "event": {
+            "type": "string"
+          },
+          "time": {
+            "type": "string"
+          },
+          "moment": {
+            "type": "string"
+          },
+          "duration_minutes": {
+            "type": "integer"
+          },
+          "distance_km": {
+            "type": "number"
+          },
+          "elevation_gain_m": {
+            "type": "integer"
+          },
+          "elevation_loss_m": {
+            "type": "integer"
+          },
+          "rpe": {
+            "type": "integer"
+          },
+          "note_type": {
+            "type": "string"
+          },
+          "hour_start": {
+            "type": "string"
+          },
+          "hour_end": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "description_html": {
+            "type": "string"
+          },
+          "color": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "type",
+          "id"
+        ]
+      }
+    },
+    {
+      "name": "update_planned_training",
+      "description": "Change a planned workout, its structure included.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "patch": {
+            "type": "object"
+          },
+          "athlete": {
+            "type": "string"
+          },
+          "group": {
+            "type": "string"
+          },
+          "revision": {
+            "type": "string"
+          },
+          "confirm": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "id",
+          "patch"
+        ]
+      }
+    },
+    {
+      "name": "update_training_frame",
+      "description": "Change a library workout template, its structure included.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "patch": {
+            "type": "object"
+          },
+          "revision": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "patch"
+        ]
+      }
     }
   ]
 }
