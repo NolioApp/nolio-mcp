@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="logo.png" alt="Nolio" width="120">
+  <img src="banner.png" alt="Nolio" width="100%">
 </p>
 
 # Nolio MCP server (official)
