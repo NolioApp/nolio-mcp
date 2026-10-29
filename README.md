@@ -42,6 +42,9 @@ Requires a paid Nolio account, coach or athlete.
 
 - MCP Registry: `io.nolio/nolio`
 - Claude: [claude.ai/directory/nolio](https://claude.ai/directory/nolio)
+- Glama: [glama.ai/mcp/connectors/io.nolio/nolio](https://glama.ai/mcp/connectors/io.nolio/nolio)
+
+[![Nolio MCP connector](https://glama.ai/mcp/connectors/io.nolio/nolio/badges/score.svg)](https://glama.ai/mcp/connectors/io.nolio/nolio)
 
 Other "Nolio" MCP servers are built by third parties and are not supported by Nolio.
 
