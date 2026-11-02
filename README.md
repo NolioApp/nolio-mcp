@@ -58,7 +58,7 @@ Requires a paid Nolio account, coach or athlete.
 
 - MCP Registry: `io.nolio/nolio`
 - Claude: [claude.ai/directory/nolio](https://claude.ai/directory/nolio)
-- ChatGPT: [Nolio in the ChatGPT app directory](https://chatgpt.com/plugins/plugin_asdk_app_6ad31c9ed14c8191a3c60273c9e1f174)
+- ChatGPT: [chatgpt.com/plugins/…](https://chatgpt.com/plugins/plugin_asdk_app_6ad31c9ed14c8191a3c60273c9e1f174)
 - Glama: [glama.ai/mcp/connectors/io.nolio/nolio](https://glama.ai/mcp/connectors/io.nolio/nolio)
 - LobeHub: [lobehub.com/mcp/nolio](https://lobehub.com/mcp/nolio)
 - M8ven: [m8ven.ai/mcp/nolioapp/nolio-mcp](https://m8ven.ai/mcp/nolioapp/nolio-mcp)
