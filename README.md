@@ -58,7 +58,7 @@ Requires a paid Nolio account, coach or athlete.
 - Claude: [claude.ai/directory/nolio](https://claude.ai/directory/nolio)
 - Glama: [glama.ai/mcp/connectors/io.nolio/nolio](https://glama.ai/mcp/connectors/io.nolio/nolio)
 - LobeHub: [lobehub.com/mcp/nolio](https://lobehub.com/mcp/nolio)
-- M8ven: [m8ven.ai/mcp/nolioapp-nolio-mcp-kih62t](https://m8ven.ai/mcp/nolioapp-nolio-mcp-kih62t)
+- M8ven: [m8ven.ai/mcp/nolioapp/nolio-mcp](https://m8ven.ai/mcp/nolioapp/nolio-mcp)
 
 [![Nolio MCP connector](https://glama.ai/mcp/connectors/io.nolio/nolio/badges/score.svg)](https://glama.ai/mcp/connectors/io.nolio/nolio)
 [![M8ven Score](https://m8ven.ai/badge/mcp/nolioapp-nolio-mcp-kih62t?v=7ca3b45be52fb25d01d0a49517fea6c6)](https://m8ven.ai/mcp/nolioapp-nolio-mcp-kih62t?s=readme)
