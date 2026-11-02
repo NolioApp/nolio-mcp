@@ -43,7 +43,9 @@ Requires a paid Nolio account, coach or athlete.
 
 **Claude**: install Nolio from the [Claude connector directory](https://claude.ai/directory/nolio).
 
-**ChatGPT and other MCP clients**: add a custom connector (remote MCP server) with the URL above, then sign in with your Nolio account.
+**ChatGPT**: install Nolio from the [ChatGPT app directory](https://chatgpt.com/plugins/plugin_asdk_app_6ad31c9ed14c8191a3c60273c9e1f174).
+
+**Other MCP clients**: add a custom connector (remote MCP server) with the URL above, then sign in with your Nolio account.
 
 ## Access and safety
 
