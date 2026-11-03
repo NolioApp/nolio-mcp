@@ -1,13 +1,13 @@
 {
   "identifier": "nolio",
   "name": "Nolio",
-  "version": "1.0.1",
-  "description": "Official server for the Nolio app: plan, analyze and coach endurance, strength and Hyrox training.",
+  "version": "1.0.2",
+  "description": "Endurance, strength and Hyrox coaching platform",
   "author": "Nolio",
   "authorUrl": "https://www.nolio.io",
   "homepage": "https://www.nolio.io",
   "cloudEndpoint": "https://mcp.nolio.io/mcp",
-  "icon": "https://static.cdn.nolio.io/nolio/images/nolio_logo_circle.png",
+  "icon": "https://raw.githubusercontent.com/NolioApp/nolio-mcp/main/logo.png",
   "category": "productivity",
   "tags": [
     "sports",
@@ -25,7 +25,7 @@
     {
       "locale": "fr-FR",
       "name": "Nolio",
-      "description": "Serveur officiel de l'app Nolio : planifie, analyse et coache l'entraînement endurance, renfo et Hyrox."
+      "description": "Plateforme de coaching endurance, renforcement et Hyrox"
     }
   ],
   "tools": [

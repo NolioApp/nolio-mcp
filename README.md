@@ -4,7 +4,9 @@
 
 # Nolio MCP server (official)
 
-Official MCP server for [Nolio](https://www.nolio.io), the training platform for endurance coaches, clubs and athletes. Plan, analyze and coach endurance, strength and Hyrox training from ChatGPT, Claude or any MCP client, in plain language.
+Endurance, strength and Hyrox coaching platform
+
+Official MCP server for [Nolio](https://www.nolio.io), the training platform for endurance, strength and Hyrox coaches, clubs and athletes. Work on training from ChatGPT, Claude or any MCP client, in plain language.
 
 This repository only documents the server. Nolio hosts and runs it, so there is nothing to install or deploy.
 
@@ -71,3 +73,5 @@ Other "Nolio" MCP servers are built by third parties and are not supported by No
 ## Support
 
 [www.nolio.io](https://www.nolio.io)
+
+Alternative to TrainingPeaks, Intervals.icu, FinalSurge
