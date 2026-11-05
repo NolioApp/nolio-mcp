@@ -47,6 +47,20 @@ Requires a paid Nolio account, coach or athlete.
 
 **ChatGPT**: install Nolio from the [ChatGPT app directory](https://chatgpt.com/plugins/plugin_asdk_app_6ad31c9ed14c8191a3c60273c9e1f174).
 
+**Grok**: at grok.com/connectors, click New Connector, choose Custom and paste the URL above.
+
+**Le Chat**: in Connectors, add a custom connector with the URL above.
+
+**Perplexity** (Pro): Settings > Connectors > + Custom connector > Remote, with the URL above.
+
+**Cursor**: [add to Cursor](https://www.nolio.io/cursor/), or add the URL to `~/.cursor/mcp.json`.
+
+**Codex**: `codex mcp add nolio --url https://mcp.nolio.io/mcp`, then `codex mcp login nolio`.
+
+**Claude Code**: `claude mcp add --transport http nolio https://mcp.nolio.io/mcp`, then `/mcp`.
+
+**VS Code**: [add to VS Code](https://www.nolio.io/vscode/).
+
 **Other MCP clients**: add a custom connector (remote MCP server) with the URL above, then sign in with your Nolio account.
 
 ## Access and safety
